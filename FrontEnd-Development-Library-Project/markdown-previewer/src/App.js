@@ -1,4 +1,3 @@
-import "./App.css";
 import TextArea from "./components/TextArea.jsx";
 import PreviewSquare from "./components/PreviewArea.jsx";
 
@@ -29,12 +28,12 @@ function App() {
 
 	return (
 		<div style={container}>
-			<h1 style={header}>Markdown Preview</h1>
+			<h2 style={header}>Markdown Preview</h2>
 			<div style={boxTextAndPreview}>
 				<TextArea />
 				<PreviewSquare />
 			</div>
-			<h4 style={footer}>By José Gabriel Guerra for FreeCodeCamp</h4>
+			<h5 style={footer}>By José Gabriel Guerra for FreeCodeCamp</h5>
 		</div>
 	);
 }
