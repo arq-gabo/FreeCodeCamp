@@ -3,7 +3,7 @@ import Toolbar from "./Toolbar";
 
 const TextArea = props => {
 	const textAreaStyle = {
-		width: "50%",
+		width: "100%",
 		margin: "10px",
 		border: "4px solid #A27B5C",
 		boxShadow:
@@ -22,9 +22,13 @@ const TextArea = props => {
 		resize: "none"
 	};
 
+	function saludoTextArea() {
+		console.log("textArea");
+	}
+
 	return (
 		<div style={textAreaStyle}>
-			<Toolbar boxName={"Editor"} />
+			<Toolbar boxName={"Editor"} saludo={saludoTextArea} />
 			<textarea
 				type="text"
 				style={textAreaEditorStyle}

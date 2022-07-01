@@ -17,7 +17,7 @@ const Toolbar = props => {
 	return (
 		<div style={toolbarStyle}>
 			{props.boxName}
-			<TbArrowsDiagonal style={iconStyle} />
+			<TbArrowsDiagonal style={iconStyle} onClick={props.saludo} />
 		</div>
 	);
 };
