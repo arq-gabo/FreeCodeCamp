@@ -1,28 +1,33 @@
+import React from "react";
+
+//Common Styles
+import { commonStyles } from "./context/CommonStyles.js";
+
+//Components
 import TextArea from "./components/TextArea.jsx";
 import PreviewSquare from "./components/PreviewArea.jsx";
 
 function App() {
 	const container = {
-		display: "flex",
-		flexDirection: "column",
-		justifyContent: "space-between",
-		width: "100%",
+		display: commonStyles.display,
+		flexDirection: commonStyles.flexDirection,
+		justifyContent: commonStyles.justifyContent,
 		height: "100vh",
-		color: "#DCD7C9"
+		color: commonStyles.colorText
 	};
 
 	const header = {
-		textAlign: "center",
+		textAlign: commonStyles.textAlign,
 		height: "5vh"
 	};
 
 	const boxTextAndPreview = {
-		display: "flex",
+		display: commonStyles.display,
 		height: "93vh"
 	};
 
 	const footer = {
-		textAlign: "center",
+		textAlign: commonStyles.textAlign,
 		height: "2vh"
 	};
 

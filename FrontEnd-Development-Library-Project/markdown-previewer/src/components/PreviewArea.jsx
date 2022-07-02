@@ -1,17 +1,21 @@
 import React from "react";
+
+//Common Styles
+import { commonStyles } from "../context/CommonStyles";
+
+//Components
 import Toolbar from "./Toolbar";
 
 const PreviewArea = () => {
 	const previewAreaStyle = {
-		backgroundColor: "#3F4E4F",
-		width: "100%",
+		backgroundColor: commonStyles.backgroundAreas,
+		width: commonStyles.width,
 		margin: "10px",
-		borderRadius: "5px",
-		border: "4px solid #A27B5C",
-		boxShadow:
-			"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-		display: "flex",
-		flexDirection: "column"
+		borderRadius: commonStyles.borderRadius,
+		border: commonStyles.border,
+		boxShadow: commonStyles.boxShadow,
+		display: commonStyles.display,
+		flexDirection: commonStyles.flexDirection
 	};
 
 	function saludoPreviewArea() {

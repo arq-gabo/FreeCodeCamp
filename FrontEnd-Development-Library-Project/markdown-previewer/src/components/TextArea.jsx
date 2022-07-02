@@ -1,23 +1,27 @@
 import React from "react";
+
+//Common Styles
+import { commonStyles } from "../context/CommonStyles";
+
+//Components
 import Toolbar from "./Toolbar";
 
-const TextArea = props => {
+const TextArea = () => {
 	const textAreaStyle = {
-		width: "100%",
+		width: commonStyles.width,
 		margin: "10px",
-		border: "4px solid #A27B5C",
-		boxShadow:
-			"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-		borderRadius: "5px",
-		display: "flex",
-		flexDirection: "column"
+		border: commonStyles.border,
+		boxShadow: commonStyles.boxShadow,
+		borderRadius: commonStyles.borderRadius,
+		display: commonStyles.display,
+		flexDirection: commonStyles.flexDirection
 	};
 
 	const textAreaEditorStyle = {
-		backgroundColor: "#3F4E4F",
-		color: "#DCD7C9",
+		backgroundColor: commonStyles.backgroundAreas,
+		color: commonStyles.colorText,
 		width: "calc(100% - 6px)",
-		height: "100%",
+		height: commonStyles.width,
 		outline: "none",
 		resize: "none"
 	};
