@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //Common Styles
 import { commonStyles } from "../context/CommonStyles";
+import { StyleContext } from "../context/StyleContext";
 
 //Components
 import Toolbar from "./Toolbar";
 
 const PreviewArea = () => {
+	// recive value from StyleContext high order component
+	const { displayPrwArea, prwAreaDisplayExt, areaExt } =
+		useContext(StyleContext);
+
 	const previewAreaStyle = {
 		backgroundColor: commonStyles.backgroundAreas,
 		width: commonStyles.width,
@@ -14,17 +19,17 @@ const PreviewArea = () => {
 		borderRadius: commonStyles.borderRadius,
 		border: commonStyles.border,
 		boxShadow: commonStyles.boxShadow,
-		display: commonStyles.display,
+		display: displayPrwArea,
 		flexDirection: commonStyles.flexDirection
 	};
 
-	function saludoPreviewArea() {
-		console.log("preview area");
-	}
-
 	return (
 		<div style={previewAreaStyle}>
-			<Toolbar boxName={"Preview"} saludo={saludoPreviewArea} />
+			<Toolbar
+				boxName={"Preview"}
+				funcExtend={prwAreaDisplayExt}
+				extend={areaExt}
+			/>
 			PreviewSquare
 		</div>
 	);

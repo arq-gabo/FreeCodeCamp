@@ -1,5 +1,5 @@
 import React from "react";
-import { TbArrowsDiagonal } from "react-icons/tb";
+import { TbArrowsDiagonal, TbArrowsDiagonalMinimize } from "react-icons/tb";
 
 const Toolbar = props => {
 	const toolbarStyle = {
@@ -17,7 +17,9 @@ const Toolbar = props => {
 	return (
 		<div style={toolbarStyle}>
 			{props.boxName}
-			<TbArrowsDiagonal style={iconStyle} onClick={props.saludo} />
+			<div style={iconStyle} onClick={props.funcExtend}>
+				{props.extend ? <TbArrowsDiagonalMinimize /> : <TbArrowsDiagonal />}
+			</div>
 		</div>
 	);
 };

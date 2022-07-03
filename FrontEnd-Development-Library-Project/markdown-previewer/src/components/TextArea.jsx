@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 
 //Common Styles
 import { commonStyles } from "../context/CommonStyles";
+import { StyleContext } from "../context/StyleContext";
 
 //Components
 import Toolbar from "./Toolbar";
 
 const TextArea = () => {
+	// recive value from StyleContext high order component using Context api
+	const { displayTxtArea, txtAreaDisplayExt, areaExt } =
+		useContext(StyleContext);
+
 	const textAreaStyle = {
 		width: commonStyles.width,
 		margin: "10px",
 		border: commonStyles.border,
 		boxShadow: commonStyles.boxShadow,
 		borderRadius: commonStyles.borderRadius,
-		display: commonStyles.display,
+		display: displayTxtArea,
 		flexDirection: commonStyles.flexDirection
 	};
 
@@ -26,13 +31,13 @@ const TextArea = () => {
 		resize: "none"
 	};
 
-	function saludoTextArea() {
-		console.log("textArea");
-	}
-
 	return (
 		<div style={textAreaStyle}>
-			<Toolbar boxName={"Editor"} saludo={saludoTextArea} />
+			<Toolbar
+				boxName={"Editor"}
+				funcExtend={txtAreaDisplayExt}
+				extend={areaExt}
+			/>
 			<textarea
 				type="text"
 				style={textAreaEditorStyle}

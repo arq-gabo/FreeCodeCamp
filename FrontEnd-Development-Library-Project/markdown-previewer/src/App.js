@@ -2,6 +2,7 @@ import React from "react";
 
 //Common Styles
 import { commonStyles } from "./context/CommonStyles.js";
+import { StyleProvider } from "./context/StyleContext.js";
 
 //Components
 import TextArea from "./components/TextArea.jsx";
@@ -32,14 +33,16 @@ function App() {
 	};
 
 	return (
-		<div style={container}>
-			<h2 style={header}>Markdown Preview</h2>
-			<div style={boxTextAndPreview}>
-				<TextArea />
-				<PreviewSquare />
+		<StyleProvider>
+			<div style={container}>
+				<h2 style={header}>Markdown Preview</h2>
+				<div style={boxTextAndPreview}>
+					<TextArea />
+					<PreviewSquare />
+				</div>
+				<h5 style={footer}>By José Gabriel Guerra for FreeCodeCamp</h5>
 			</div>
-			<h5 style={footer}>By José Gabriel Guerra for FreeCodeCamp</h5>
-		</div>
+		</StyleProvider>
 	);
 }
 
