@@ -24,7 +24,8 @@ function App() {
 
 	const boxTextAndPreview = {
 		display: commonStyles.display,
-		height: "93vh"
+		height: "93vh",
+		justifyContent: "center"
 	};
 
 	const footer = {

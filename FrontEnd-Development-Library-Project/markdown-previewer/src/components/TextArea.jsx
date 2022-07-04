@@ -26,7 +26,7 @@ const TextArea = () => {
 		backgroundColor: commonStyles.backgroundAreas,
 		color: commonStyles.colorText,
 		width: "calc(100% - 6px)",
-		height: commonStyles.width,
+		height: "100%",
 		outline: "none",
 		resize: "none"
 	};

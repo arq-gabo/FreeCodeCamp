@@ -1,6 +1,6 @@
 export const commonStyles = {
 	//Size Common
-	width: "100%",
+	width: "60%",
 
 	//Backgorund Common
 	backgroundAreas: "#3F4E4F",
