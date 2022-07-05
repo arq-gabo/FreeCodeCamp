@@ -2,7 +2,11 @@ import React, { useContext } from "react";
 
 //Common Styles
 import { commonStyles } from "../context/CommonStyles";
+
+// Style Context
 import { StyleContext } from "../context/StyleContext";
+// Text Context
+import { TextContext } from "../context/TextContext";
 
 //Components
 import Toolbar from "./Toolbar";
@@ -12,8 +16,10 @@ const TextArea = () => {
 	const { displayTxtArea, txtAreaDisplayExt, areaExt } =
 		useContext(StyleContext);
 
+	const { input, setInput } = useContext(TextContext);
+
 	const textAreaStyle = {
-		width: commonStyles.width,
+		width: areaExt ? commonStyles.widthExt : commonStyles.width,
 		margin: "10px",
 		border: commonStyles.border,
 		boxShadow: commonStyles.boxShadow,
@@ -41,6 +47,8 @@ const TextArea = () => {
 			<textarea
 				type="text"
 				style={textAreaEditorStyle}
+				value={input}
+				onChange={e => setInput(e.target.value)}
 				placeholder="Write you text here..."
 			></textarea>
 		</div>

@@ -1,0 +1,39 @@
+.markdown h1{
+    border-bottom: 4px solid #DCD7C9;
+    width: calc(100% - 5px);
+}
+
+.markdown h2 {
+    border-bottom: 2px solid #DCD7C9;
+    width: calc(100% - 5px);
+}
+
+code {
+    background-color: #2C3639;
+    border-radius: 5px;
+}
+
+pre {
+    background-color: #2C3639;
+    border-radius: 5px;
+    width: calc(100% - 5px);
+    font-size: 90%;
+}
+
+table, td, th {
+    border: 1px solid #DCD7C9;
+}
+
+table {
+    border-collapse: collapse;
+    width: calc(100% - 5px);
+}
+
+td, th {
+    padding: 5px;
+}
+
+img{
+    width: calc(100% - 5px);
+    height: auto;
+}

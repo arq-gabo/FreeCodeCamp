@@ -5,7 +5,7 @@ const Toolbar = props => {
 	const toolbarStyle = {
 		backgroundColor: "#A27B5C",
 		textAlign: "center",
-		border: "4px solid #A27B5C",
+		border: "1px solid #A27B5C",
 		display: "flex",
 		justifyContent: "space-between"
 	};

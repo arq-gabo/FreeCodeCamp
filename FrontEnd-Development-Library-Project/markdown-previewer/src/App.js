@@ -2,7 +2,12 @@ import React from "react";
 
 //Common Styles
 import { commonStyles } from "./context/CommonStyles.js";
+
+//Style Context
 import { StyleProvider } from "./context/StyleContext.js";
+
+//Text Context
+import { TextProvider } from "./context/TextContext.js";
 
 //Components
 import TextArea from "./components/TextArea.jsx";
@@ -24,7 +29,7 @@ function App() {
 
 	const boxTextAndPreview = {
 		display: commonStyles.display,
-		height: "93vh",
+		height: "75vh",
 		justifyContent: "center"
 	};
 
@@ -38,8 +43,10 @@ function App() {
 			<div style={container}>
 				<h2 style={header}>Markdown Preview</h2>
 				<div style={boxTextAndPreview}>
-					<TextArea />
-					<PreviewSquare />
+					<TextProvider>
+						<TextArea />
+						<PreviewSquare />
+					</TextProvider>
 				</div>
 				<h5 style={footer}>By José Gabriel Guerra for FreeCodeCamp</h5>
 			</div>

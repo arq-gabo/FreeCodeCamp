@@ -1,8 +1,15 @@
 import React, { useContext } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import "./PreviewArea.css";
 
 //Common Styles
 import { commonStyles } from "../context/CommonStyles";
+
+//Style Context
 import { StyleContext } from "../context/StyleContext";
+//Text Context
+import { TextContext } from "../context/TextContext";
 
 //Components
 import Toolbar from "./Toolbar";
@@ -12,9 +19,11 @@ const PreviewArea = () => {
 	const { displayPrwArea, prwAreaDisplayExt, areaExt } =
 		useContext(StyleContext);
 
+	const { input } = useContext(TextContext);
+
 	const previewAreaStyle = {
 		backgroundColor: commonStyles.backgroundAreas,
-		width: commonStyles.width,
+		width: areaExt ? commonStyles.widthExt : commonStyles.width,
 		margin: "10px",
 		borderRadius: commonStyles.borderRadius,
 		border: commonStyles.border,
@@ -23,14 +32,25 @@ const PreviewArea = () => {
 		flexDirection: commonStyles.flexDirection
 	};
 
+	const markdown = {
+		height: "100%",
+		overflow: "auto",
+		marginLeft: "5px"
+	};
+
 	return (
-		<div style={previewAreaStyle}>
+		<div style={previewAreaStyle} className="markdown">
 			<Toolbar
 				boxName={"Preview"}
 				funcExtend={prwAreaDisplayExt}
 				extend={areaExt}
 			/>
-			PreviewSquare
+			<div style={markdown}>
+				<ReactMarkdown
+					children={input}
+					remarkPlugins={[[remarkGfm, { singleTilde: false }]]}
+				/>
+			</div>
 		</div>
 	);
 };

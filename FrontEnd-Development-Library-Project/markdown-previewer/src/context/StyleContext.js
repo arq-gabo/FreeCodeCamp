@@ -2,18 +2,11 @@ import React, { useState, createContext } from "react";
 
 export const StyleContext = createContext();
 
-const initialDisplayAreas = {
-	initialDisplayTextArea: "flex",
-	initialDisplayPreviewArea: "flex"
-};
+const initialDisplayAreas = "flex";
 
 export const StyleProvider = ({ children }) => {
-	const [displayTxtArea, setDisplayTxtArea] = useState(
-		initialDisplayAreas.initialDisplayTextArea
-	);
-	const [displayPrwArea, setDisplayPrwArea] = useState(
-		initialDisplayAreas.initialDisplayPreviewArea
-	);
+	const [displayTxtArea, setDisplayTxtArea] = useState(initialDisplayAreas);
+	const [displayPrwArea, setDisplayPrwArea] = useState(initialDisplayAreas);
 
 	const [areaExt, setAreaExt] = useState(false);
 
