@@ -1,10 +1,10 @@
 .markdown h1{
-    border-bottom: 4px solid #DCD7C9;
+    border-bottom: 2px solid #DCD7C9;
     width: calc(100% - 5px);
 }
 
 .markdown h2 {
-    border-bottom: 2px solid #DCD7C9;
+    border-bottom: 1px solid #DCD7C9;
     width: calc(100% - 5px);
 }
 

@@ -45,7 +45,7 @@ const PreviewArea = () => {
 				funcExtend={prwAreaDisplayExt}
 				extend={areaExt}
 			/>
-			<div style={markdown}>
+			<div style={markdown} id="preview">
 				<ReactMarkdown
 					children={input}
 					remarkPlugins={[[remarkGfm, { singleTilde: false }]]}

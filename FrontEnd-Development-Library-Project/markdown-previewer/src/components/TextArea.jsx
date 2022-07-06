@@ -49,6 +49,7 @@ const TextArea = () => {
 				style={textAreaEditorStyle}
 				value={input}
 				onChange={e => setInput(e.target.value)}
+				id="editor"
 				placeholder="Write you text here..."
 			></textarea>
 		</div>
