@@ -38,6 +38,11 @@ function App() {
 		height: "2vh"
 	};
 
+	const anchor = {
+		textDecoration: "none",
+		color: commonStyles.colorText
+	};
+
 	return (
 		<StyleProvider>
 			<div style={container}>
@@ -48,7 +53,16 @@ function App() {
 						<PreviewSquare />
 					</TextProvider>
 				</div>
-				<h5 style={footer}>By José Gabriel Guerra for FreeCodeCamp</h5>
+				<h5 style={footer}>
+					By José Gabriel Guerra for FreeCodeCamp{" "}
+					<a
+						style={anchor}
+						target="noreferrer"
+						href="https://github.com/arq-gabo/markdown-previewer"
+					>
+						- Show Code
+					</a>
+				</h5>
 			</div>
 		</StyleProvider>
 	);
