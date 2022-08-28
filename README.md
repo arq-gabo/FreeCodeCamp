@@ -16,8 +16,8 @@
 
 1. Clone the project from [GitHub Repository](https://github.com/arq-gabo/markdown-previewer)
 2. `npm install` - for install dependency
-3. `npm start` - for run development enviroment
-4. `npm build` - for run production enviroment
+3. `npm run start` - for run development enviroment
+4. `npm run build` - for run production enviroment and deploy in GitHubPage
 
 ---
 
